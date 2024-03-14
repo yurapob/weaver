@@ -1,6 +1,6 @@
-from ui.simple_app import SimpleApp
+from ui.app import App
 
 if __name__ == "__main__":
-    app = SimpleApp()
+    app = App()
     app.mainloop()
 
