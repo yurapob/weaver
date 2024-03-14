@@ -1,5 +1,6 @@
 import tkinter as tk
-from ui.frames import UploadFrame, RequestFrame
+from ui.upload_frame import UploadFrame
+from ui.request_frame import RequestFrame
 from ui.rectangle_button import RectangularButton
 
 
