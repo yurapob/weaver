@@ -12,9 +12,9 @@ class UploadFrame(tk.Frame):
         inner_frame.pack(expand=True)
 
         text_message = (
-            "Please upload the PDF \n"
-            "file you would like to \n"
-            "search through the future"
+            "Please upload the PDF\n"
+            "file you intend to\n"
+            "explore in the future."
         )
         label = tk.Label(
             inner_frame,

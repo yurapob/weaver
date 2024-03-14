@@ -4,5 +4,27 @@ from ui.rectangle_button import RectangularButton
 
 class RequestFrame(tk.Frame):
     def __init__(self, parent, controller):
-        tk.Frame.__init__(self, parent, bg="#282828")
-        tk.Label(self, text="Ask Question Screen", bg='black', fg='white').pack(expand=True)
+        super().__init__(parent, bg="#282828")
+
+        input_frame = tk.Frame(self, bg="#282828")
+        input_frame.pack(side='bottom', fill='x', padx=20, pady=20)
+
+        self.query_entry = tk.Entry(input_frame, font=("Courier New", 14))
+        self.query_entry.grid(row=0, column=0, sticky="ew", padx=(0, 10), ipady=6)
+
+        self.submit_button = RectangularButton(
+            input_frame,
+            text="Submit",
+            width=92,
+            height=36.5,
+            color="#4CAF50",
+            bg="#282828",
+            text_color="white",
+            command=self.submit_query)
+        self.submit_button.grid(row=0, column=1)
+
+        input_frame.columnconfigure(0, weight=1)
+
+    def submit_query(self):
+        query = self.query_entry.get()
+        print(f"Query submitted: {query}")
