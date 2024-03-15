@@ -27,3 +27,8 @@ class PDFManager:
     @classmethod
     def get_files(cls):
         return cls.selected_files
+
+    @classmethod
+    def cleanup(cls):
+        if cls.temp_dir and os.path.exists(cls.temp_dir):
+            shutil.rmtree(cls.temp_dir)
