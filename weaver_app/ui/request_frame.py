@@ -1,3 +1,4 @@
+import threading
 import tkinter as tk
 from ui.rectangle_button import RectangularButton
 from managers.chat_manager import DocumentQueryEngine
@@ -28,7 +29,11 @@ class RequestFrame(tk.Frame):
 
     def submit_query(self):
         question = self.query_entry.get()
+        thread = threading.Thread(target=self.handle_query, args=(question,))
+        thread.start()
+
+    @staticmethod
+    def handle_query(question):
         query_engine = DocumentQueryEngine()
         answer = query_engine.ask_question(question)
-
         print(answer)
