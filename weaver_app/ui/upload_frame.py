@@ -34,7 +34,7 @@ class UploadFrame(tk.Frame):
             initial_dir = '/'
 
             file_path = filedialog.askopenfilename(title=dialog_title, initialdir=initial_dir, filetypes=file_types)
-            PDFManager.add_file(file_path)
+            PDFManager().add_file(file_path)
 
             root.destroy()
 

@@ -9,6 +9,6 @@ llama-index-llms-replicate
 tk
 openai
 nltk
-gradio
+python-dotenv
 pypdf
 supabase

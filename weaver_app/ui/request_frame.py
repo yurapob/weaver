@@ -1,5 +1,6 @@
 import tkinter as tk
 from ui.rectangle_button import RectangularButton
+from managers.chat_manager import DocumentQueryEngine
 
 
 class RequestFrame(tk.Frame):
@@ -26,5 +27,8 @@ class RequestFrame(tk.Frame):
         input_frame.columnconfigure(0, weight=1)
 
     def submit_query(self):
-        query = self.query_entry.get()
-        print(f"Query submitted: {query}")
+        question = self.query_entry.get()
+        query_engine = DocumentQueryEngine()
+        answer = query_engine.ask_question(question)
+
+        print(answer)
