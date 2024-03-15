@@ -1,0 +1,14 @@
+llama-index
+llama-index-core
+llama-index-readers-web
+llama-index-graph-stores-nebula
+llama-index-embeddings-openai
+llama-index-llms-azure-openai
+llama-index-llms-openai
+llama-index-llms-replicate
+tk
+openai
+nltk
+gradio
+pypdf
+supabase
