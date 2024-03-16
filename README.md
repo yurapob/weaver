@@ -18,11 +18,12 @@ For each answer provided, the application display the section where the answer w
 
 ## Project structure
     .
-    ├── weaver_app              # Source code for the project
+    ├── weaver_app             # Source code for the project
     │   ├── ... 
     │   ├── ui                 # Folder with ui components
     │   ├── managers           # Folder with necessary classes
     │   ├── weaver.py          # Main file
+    │   ├── .env               # Environment variables
     │   └── requirements.txt   # Required libraries and dependencies
     │
     ├── README.md              # Project overview and setup instructions
