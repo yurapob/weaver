@@ -37,5 +37,14 @@ class DocumentQueryEngine:
         return chat_engine
 
     def ask_question(self, question):
-        bot_message = self.chat_engine.chat(question)
-        return bot_message
+        bot_response = self.chat_engine.chat(question)
+
+        sections_info = [
+            f">>> {node_with_score.node.metadata.get('file_name')}, {node_with_score.node.metadata.get('page_label')}"
+            for node_with_score in bot_response.source_nodes
+        ]
+        sections_info.reverse()
+
+        response_text = f"{bot_response}\n\n\n" + "\n".join(sections_info)
+
+        return response_text
