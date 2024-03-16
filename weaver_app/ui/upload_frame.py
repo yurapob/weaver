@@ -4,6 +4,7 @@ from tkinter import filedialog
 from ui.rectangle_button import RectangularButton
 from managers.pdf_manager import PDFManager
 
+
 class UploadFrame(tk.Frame):
     def __init__(self, parent, controller):
         super().__init__(parent, bg="#282828")
