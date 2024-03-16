@@ -50,6 +50,10 @@ For each answer provided, the application display the section where the answer w
     ```
     $ pip install -r requirements.txt
     ```
+4. Setup your OpenAI API token in .env file
+    ```
+    OPENAI_API_KEY="YOUR OPENAI API KEY"
+    ```
     
 ### Running the Application
 
