@@ -22,7 +22,7 @@ class PDFManager:
             shutil.copy(file_path, temp_file_path)
             self.selected_files.add(temp_file_path)
         else:
-            raise FileNotFoundError(f"File not found: {file_path}")
+            raise FileNotFoundError(f">>> File not found: {file_path}")
 
     @classmethod
     def get_files(cls):
